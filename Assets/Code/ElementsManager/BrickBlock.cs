@@ -28,7 +28,7 @@ namespace Code.ElementsManager
 
         internal override void ReInit() => Invoke(nameof(Recycle), _timeRecycle);
         internal void TimeRecycleObject(float time) => Invoke(nameof(Recycle), time);
-        internal override void Release() => Debug.Log("BrickBlock Reciclado");
+        internal override void Release() => Debug.Log("Recycled BrickBlock");
         
     }
 

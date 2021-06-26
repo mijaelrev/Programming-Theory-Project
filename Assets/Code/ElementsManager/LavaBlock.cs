@@ -30,7 +30,7 @@ namespace Code.ElementsManager
 
         private void OnCollisionEnter(Collision collision) => CollisionAction(collision);
         private void OnCollisionExit(Collision collision) => CollisionAction(collision);
-        protected override void TriggerAction(Collider other) { }
+        protected override void TriggerAction(Collider other) => Debug.Log("No Implementado LavaBlock");
         internal override void CollisionAction(Collision collision)
         {
             if (!collision.gameObject.CompareTag("Player")) return;
@@ -38,7 +38,7 @@ namespace Code.ElementsManager
         }
 
         internal override void ReInit() => Invoke(nameof(Recycle), _timeRecycle);
-        internal override void Release() => Debug.Log("LavaBlock Recycle");
+        internal override void Release() => Debug.Log("Recycled LavaBlock");
 
     }
 }

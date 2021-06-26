@@ -108,7 +108,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 1.25, z: 0.9}
+  m_Size: {x: 1.3, y: 3.9, z: 1.3}
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &-4054559674749039097
 MonoBehaviour:
@@ -125,4 +125,5 @@ MonoBehaviour:
   _timeRecycle: 20
   _touchTimeRecycle: 0
   ID: 3
-  _maxVelocity: 10
+  _maxVelocity: 20
+  _timeClearValue: 100

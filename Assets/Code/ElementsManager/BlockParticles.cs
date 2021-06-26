@@ -28,6 +28,5 @@ namespace Code.ElementsManager
             }
         }
 
-
     }
 }
