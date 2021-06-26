@@ -21,6 +21,6 @@ namespace Code.ElementsManager
         internal override void CollisionAction(Collision collision) => Debug.LogWarning("No implementado {ImpulseBlock.SecondatyAction()}");
 
         internal override void ReInit() => Invoke(nameof(Recycle), _timeRecycle);
-        internal override void Release() => Debug.Log("ImpulseBlock Reciclado");
+        internal override void Release() => Debug.Log("Recycled ImpulseBlock");
     }
 }

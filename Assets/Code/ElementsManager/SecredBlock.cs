@@ -36,7 +36,7 @@ namespace Code.ElementsManager
 
         internal void TimeRecycleObject(float time) => Invoke(nameof(Recycle), time);
 
-        internal override void Release() => Debug.Log("SecredBlock Reciclado");
+        internal override void Release() => Debug.Log("Recycled SecredBlock");
 
     }
 }
