@@ -4,7 +4,11 @@ namespace Code.Spawner
 {
     public class SpawnerEvent : MonoBehaviour, IKilleable
     {
-        private Collider _other;
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Player")) return;
+            OnPlayerKill();
+        }
         public void OnPlayerKill()
         {
             var mediator = GameObject.FindGameObjectWithTag("Mediator");

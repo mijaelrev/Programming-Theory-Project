@@ -17,52 +17,74 @@ namespace Code.Spawner
         private Vector3 _position = Vector3.zero;
 
         [SerializeField] private int _maxNumberInstances = 8;
-        private int _numberInstances;
-        public static ObjectsSpawnManager Instance;
-        private void Awake()
-        {
-            _factory = new BlockFactory(_blockConfig);
-        }
-        private void Start()
-        {
-            _myTransform = GetComponent<Transform>();
+        private void Awake() => _factory = new BlockFactory(_blockConfig);
+        private void Start() => GameInit();
+        private void Update() => TimeInstantiate();
 
-        }
-        private void Update()
-        {
-            TimeInstantiate();
-
-        }
-
+        /// <summary>
+        /// Tiempo de retraso de para instanciar
+        /// </summary>
         private void TimeInstantiate()
         {
+            
             _moveTime -= Time.deltaTime;
             if (_moveTime <= 0f)
             {
                 _position += Vector3.up * _upValue;
                 _moveTime = _upValue;
-                PoolObjectInstanciate();
+                NewPoolObjectsInstancer();
             }
             _myTransform.position = _position;
+
         }
 
-        private void PoolObjectInstanciate()
+        /// <summary>
+        /// Crea objectos continuamente de forma aleatoria
+        /// </summary>
+        private void NewPoolObjectsInstancer()
         {
-            _numberInstances = _randomizer.IntRandom(_maxNumberInstances);
-            for (int i = 0; i < _numberInstances; i++)
+            
+            for (int x = -_maxNumberInstances; x < _maxNumberInstances; x++)
             {
-                var randomNum = _randomizer.IntRandom(_maxNumberInstances);
-                float xPosition = _myTransform.localPosition.x + _randomizer.IntRandom(randomNum, -randomNum);
-                float zPosition = _myTransform.localPosition.z + _randomizer.IntRandom(randomNum, -randomNum);
-                var currentPositionPlus = new Vector3(xPosition, _myTransform.position.y, zPosition);
 
-                var objectId = _randomizer.IntRandom(_blockConfig._blocks.Count);
+                for (int z = -_maxNumberInstances; z < _maxNumberInstances; z++)
+                {
+                    var newRandom = _randomizer.IntRandom(32);
+                    if (newRandom < 1)
+                    {
+                        var newPositionZ = _myTransform.position.z + x;
+                        var newPositionX = _myTransform.position.x + z;
+                        var CurrentPositionSpawn = new Vector3(newPositionZ, transform.position.y, newPositionX);
+                        var objectID = _randomizer.IntRandom(_blockConfig._blocks.Count);
+                        _factory.Create(objectID, CurrentPositionSpawn, Quaternion.identity);
 
-                _factory.Create(objectId, currentPositionPlus, Quaternion.identity);
+                    }
+                    
+                }
 
             }
         }
 
+        /// <summary>
+        /// Al iniciar el juego crea un cuadrado plano para evitar que el player caiga al vacio
+        /// </summary>
+        private void GameInit()
+        {
+            _myTransform = GetComponent<Transform>();
+            for (int x = -_maxNumberInstances; x < _maxNumberInstances; x++)
+            {
+                for (int z = -_maxNumberInstances; z < _maxNumberInstances; z++)
+                {
+                    var newPositionZ = _myTransform.position.z + x;
+                    var newPositionX = _myTransform.position.x + z;
+                    var CurrentPositionSpawn = new Vector3(newPositionZ, transform.position.y - 1, newPositionX);
+                    _factory.Create(0, CurrentPositionSpawn, Quaternion.identity);
+
+                }
+
+            }
+            _position += Vector3.up;
+        }
 
     }
 
