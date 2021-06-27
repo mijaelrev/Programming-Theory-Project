@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlocksPrefab
   m_EditorClassIdentifier: 
   _blocks:
-  - {fileID: 7245368700319547430, guid: b83a6882f8ca6af499bf3a722c82b26a, type: 3}
+  - {fileID: -2711764380520550679, guid: b83a6882f8ca6af499bf3a722c82b26a, type: 3}
   - {fileID: 57279716533951311, guid: 7e14cd7b43fefae409ec0de3aa9ff27f, type: 3}
   - {fileID: -7678929717682406822, guid: 774b13a363b6dc447934c171758f22f5, type: 3}
   - {fileID: -4054559674749039097, guid: 0f609bfa6173750498758a0cb0203775, type: 3}

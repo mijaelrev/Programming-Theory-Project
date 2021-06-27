@@ -91,7 +91,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696056421518383010}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5e284b2d0d906a547a8969fece95eff1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -108,7 +108,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 3.9, z: 1.3}
+  m_Size: {x: 1.2, y: 3.9, z: 1.2}
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &-4054559674749039097
 MonoBehaviour:
@@ -125,5 +125,5 @@ MonoBehaviour:
   _timeRecycle: 20
   _touchTimeRecycle: 0
   ID: 3
-  _maxVelocity: 20
+  _maxVelocity: 25
   _timeClearValue: 100

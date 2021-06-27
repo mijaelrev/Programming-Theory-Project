@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 143200811303301462}
   - component: {fileID: 2745004622037321116}
   - component: {fileID: 2765863783521640459}
+  - component: {fileID: -2002956894864727735}
   - component: {fileID: -7678929717682406822}
   m_Layer: 0
   m_Name: SecredBlock
@@ -90,12 +91,25 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4402492218027844681}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5e284b2d0d906a547a8969fece95eff1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &-2002956894864727735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4402492218027844681}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 0.025, z: 0.9}
+  m_Center: {x: 0, y: -0.0125, z: 0}
 --- !u!114 &-7678929717682406822
 MonoBehaviour:
   m_ObjectHideFlags: 0

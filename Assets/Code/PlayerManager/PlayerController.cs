@@ -33,8 +33,8 @@ namespace Assets.Code.PlayerManager
         [SerializeField] private float _newSpeed;   //Nueva velocidad, cambia entre una y otra
 
         private Transform _myTransform;
-        private static PlayerController _instance;
-        public static PlayerController Instance => _instance ?? (_instance = new PlayerController());   //Instancia si es nula se crea
+        //private static PlayerController _instance;
+        //public static PlayerController Instance => _instance ?? (_instance = new PlayerController());   //Instancia si es nula se crea
         private void Start()
         {
             if (_rigidbody == null) //comprobaciones

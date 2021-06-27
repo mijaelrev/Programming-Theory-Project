@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mediator
+  - Spawner
+  - GameManager
   layers:
   - Default
   - TransparentFX

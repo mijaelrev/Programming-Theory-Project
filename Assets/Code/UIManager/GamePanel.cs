@@ -9,9 +9,8 @@ namespace Code.UIManager
         [SerializeField] private TextMeshProUGUI _time;
         private float _seconds;
         private int _minutes;
-        [Tooltip("CurrentTime, that es private for security, for Get use TimeNow")]
-        private float _currentTime;
-        public float TimeNow => _currentTime;
+        private float _currentTime; //CurrentTime, that is private for security, for Get use TimeNow
+        public float TimeNow => _currentTime; 
         [SerializeField] private string _newFormat;
         private MainMenu _mainMenu;
 
@@ -19,7 +18,10 @@ namespace Code.UIManager
 
         private void Update()
         {
-            Chronometer();
+            if (_mainMenu.HasStart())
+            {
+                Chronometer();
+            }
             _mainMenu.ChangeMaxScore(_currentTime);
         }
 
@@ -31,6 +33,6 @@ namespace Code.UIManager
             _time.text = System.String.Format(" Time: {0:00}:{1:00.00}", _minutes, _seconds);
 
         }
-
+        internal void CurrentTimeReinit() => _currentTime = 0;
     }
 }

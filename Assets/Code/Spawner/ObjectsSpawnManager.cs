@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using Code.Optimization;
+using Code.UIManager;
 
 namespace Code.Spawner
 {
     public class ObjectsSpawnManager : MonoBehaviour
     {
+        [SerializeField] private GameObject _antiFall;
+        private GameManager _gameManager;
         private Randomizer _randomizer = new Randomizer();
         private BlockFactory _factory;
         [SerializeField] private BlockConfiguration _blockConfig;
-
         [Header("Move Settigns")]
         [SerializeField] private int _upValue = 1;
         [SerializeField] private float _moveTime;
@@ -18,7 +20,13 @@ namespace Code.Spawner
 
         [SerializeField] private int _maxNumberInstances = 8;
         private void Awake() => _factory = new BlockFactory(_blockConfig);
-        private void Start() => GameInit();
+
+        private void Start()
+        {
+
+            GameInit();
+        }
+
         private void Update() => TimeInstantiate();
 
         /// <summary>
@@ -26,15 +34,17 @@ namespace Code.Spawner
         /// </summary>
         private void TimeInstantiate()
         {
-            
-            _moveTime -= Time.deltaTime;
-            if (_moveTime <= 0f)
+            if (_gameManager.Initialized)
             {
-                _position += Vector3.up * _upValue;
-                _moveTime = _upValue;
-                NewPoolObjectsInstancer();
+                _moveTime -= Time.deltaTime;
+                if (_moveTime <= 0f)
+                {
+                    _position += Vector3.up * _upValue;
+                    _moveTime = _upValue;
+                    NewPoolObjectsInstancer();
+                }
+                _myTransform.position = _position;
             }
-            _myTransform.position = _position;
 
         }
 
@@ -70,8 +80,9 @@ namespace Code.Spawner
         /// </summary>
         private void GameInit()
         {
+            _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             _myTransform = GetComponent<Transform>();
-            for (int x = -_maxNumberInstances; x < _maxNumberInstances; x++)
+            /*for (int x = -_maxNumberInstances; x < _maxNumberInstances; x++)
             {
                 for (int z = -_maxNumberInstances; z < _maxNumberInstances; z++)
                 {
@@ -82,7 +93,7 @@ namespace Code.Spawner
 
                 }
 
-            }
+            }*/
             _position += Vector3.up;
         }
 

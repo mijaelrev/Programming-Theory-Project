@@ -15,9 +15,9 @@ namespace Code.UIManager
         internal void Configure(MainMenu mainMenu) => _mainMenu = mainMenu;
         private void Awake()
         {
-            //_resumeGameButton.onClick.AddListener(()=> _mainMenu.ResumeGame());
+
             _restartGameButton.onClick.AddListener(() => _mainMenu.RestartGame());
-            _menuButton.onClick.AddListener(() => _mainMenu.GoMainMenu());
+            _menuButton.onClick.AddListener(() => _mainMenu.GoMainMenuRestart());
         }
 
         internal void ShowFinalInfo(string name, float score)

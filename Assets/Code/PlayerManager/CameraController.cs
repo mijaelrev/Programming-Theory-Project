@@ -12,10 +12,10 @@ namespace Code.PlayerManager
         [SerializeField] private float _moveViewUpPosition = 0.7f;
 
         //TODO: Remover(seguro de remover la borrar el todo de mas abajo)
-        private float hitDistance;
+        //private float hitDistance;
         private RaycastHit hit;
-        private Vector3 _cameraPosition = Vector3.zero;
-        private Vector3 _cameraOclussion;
+        //private Vector3 _cameraPosition = Vector3.zero;
+        //private Vector3 _cameraOclussion;
         private Vector3 _rayDirection;
 
         private float _mouseX = 0.0f;
@@ -26,7 +26,6 @@ namespace Code.PlayerManager
 
         private Transform _myTransform;
 
-        //private bool _mustCursorLock; //Cursor
         private void Start()
         {
             _myTransform = transform;
@@ -41,8 +40,6 @@ namespace Code.PlayerManager
 
             _distance = Mathf.Clamp(_distance, MIN_DISTANCE, MAX_DISTANCE);
             _mouseY = Mathf.Clamp(_mouseY, ANGLE_Y_MIN, ANGLE_Y_MAX);
-
-            //CursorChangeState();
         }
 
 
@@ -68,20 +65,6 @@ namespace Code.PlayerManager
             _myTransform.LookAt(_player.transform.position + Vector3.up * _moveViewUpPosition);
 
         }
-        /*private void CursorChangeState()
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (!_mustCursorLock)
-                {
-                    Cursor.lockState = CursorLockMode.Locked;
-                }
-                if (_mustCursorLock)
-                {
-                    Cursor.lockState = CursorLockMode.None;
-                }
-                _mustCursorLock = !_mustCursorLock;
-            }
-        }*/
+
     }
 }
