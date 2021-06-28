@@ -91,6 +91,7 @@ namespace Code.UIManager
             _playerData.SaveDataPersistence();
             _game.CurrentTimeReinit();
             _gameManager.GameStart(3000);
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         internal void GameOver()

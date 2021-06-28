@@ -8,6 +8,7 @@ namespace Code.Spawner
         {
             if (!other.gameObject.CompareTag("Player")) return;
             OnPlayerKill();
+            
         }
         public void OnPlayerKill()
         {

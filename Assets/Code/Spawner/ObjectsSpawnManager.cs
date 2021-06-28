@@ -6,7 +6,6 @@ namespace Code.Spawner
 {
     public class ObjectsSpawnManager : MonoBehaviour
     {
-        [SerializeField] private GameObject _antiFall;
         private GameManager _gameManager;
         private Randomizer _randomizer = new Randomizer();
         private BlockFactory _factory;
@@ -20,13 +19,7 @@ namespace Code.Spawner
 
         [SerializeField] private int _maxNumberInstances = 8;
         private void Awake() => _factory = new BlockFactory(_blockConfig);
-
-        private void Start()
-        {
-
-            GameInit();
-        }
-
+        private void Start() => GameInit();
         private void Update() => TimeInstantiate();
 
         /// <summary>
@@ -90,11 +83,11 @@ namespace Code.Spawner
                     var newPositionX = _myTransform.position.x + z;
                     var CurrentPositionSpawn = new Vector3(newPositionZ, transform.position.y - 1, newPositionX);
                     _factory.Create(0, CurrentPositionSpawn, Quaternion.identity);
-
                 }
 
             }*/
             _position += Vector3.up;
+
         }
 
     }

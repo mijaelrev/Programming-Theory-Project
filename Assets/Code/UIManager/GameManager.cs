@@ -12,7 +12,6 @@ namespace Code.UIManager
         [SerializeField] private float _changeSpawnTime = 0;
         private float _value;
         private bool _initialized = false;
-
         public bool Initialized { get => _initialized; private set => _initialized = value; }
 
         private MainMenu _mainMenu;
