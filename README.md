@@ -4,22 +4,29 @@
 
 #### Sobre el juego
 
-Este videojuego ha sido hecho con el motor [UnityEngine](http://unity.com "UnityEngine") de la mano de [UnityLearn](http://learn.unity.com/ "UnityLearn").
-el juego trata sobre saltar y sobrevivir el mayor tiempo posible, pero ten cuidado, los bloques tienen un comportamiento distinto, ¿Cuándo tiempo podras sobrevivir?.
-Solo esta disponible para Windows por ahora (posiblemente tambien sea publicado en WebGL, para otras platafomas no tengo intencion de hacer una Build).
+ Este videojuego ha sido hecho con el motor [UnityEngine](http://unity.com "UnityEngine") de la mano de [UnityLearn](http://learn.unity.com/ "UnityLearn").
+ 
+ el juego trata sobre saltar y sobrevivir el mayor tiempo posible, pero ten cuidado, los bloques tienen un comportamiento distinto, ¿Cuándo tiempo podras sobrevivir?.
+ 
+ Solo esta disponible para Windows por ahora (posiblemente tambien sea publicado en WebGL, para otras platafomas no tengo intencion de hacer una Build).
 
 ### Controles
 
--W,A,S y D o flechas para el movimiento.
--LeftShift para aumentar tu velocidad.
--Space de el teclado.
--Raton para girar la camara.
--Rueda del raton para acercar o elejar la camara.
+- W,A,S y D o flechas para el movimiento.
+
+- LeftShift para aumentar tu velocidad.
+
+- Space de el teclado.
+
+- Raton para girar la camara.
+
+- Rueda del raton para acercar o elejar la camara.
 
 
 ### Mecanicas
 
 Al comenzar el juego se generara bloques aleatoriamente y pronto los que estan abajo iran desapareciendo.
+
 Solo tienes una forma de salvar tu pescuezo y es intentar mantenerte medianamente arriba.
 
 ### Descarga
