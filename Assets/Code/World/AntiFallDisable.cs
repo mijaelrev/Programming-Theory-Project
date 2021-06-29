@@ -6,21 +6,23 @@ namespace Code.World
     public class AntiFallDisable : MonoBehaviour
     {
         private UIManager.GameManager gameManager;
-
-        private void Start() 
-            => gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<UIManager.GameManager>();
-        private async void Update()
-        {
-            await Disabler();
-        }
+        private AntiFallDisable _antifall;
+        private void Start() => Init();
+        private async void Update() => await Disabler();
 
         private async Task Disabler()
         {
             if (gameManager.Initialized)
             {
                 await Task.Delay(20000);
-                gameObject.SetActive(false);
+                if(_antifall == null) return;
+                Destroy(gameObject);
             }
+        }
+        private void Init()
+        {
+            _antifall = this;
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<UIManager.GameManager>();
         }
     }
 }

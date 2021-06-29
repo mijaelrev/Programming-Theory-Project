@@ -1,13 +1,16 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Audio;
 namespace Code.UIManager
 {
     public class MainOption : MonoBehaviour
     {
         [SerializeField] private Button _backToMenu;
         [SerializeField] private TMP_Dropdown _qualities;
+
+        [SerializeField] private Slider _volume;
+        private AudioSettings _settings;
         private MainMenu _mainMenu;
         internal void Configure(MainMenu mainMenu) => _mainMenu = mainMenu;
         private void Awake()

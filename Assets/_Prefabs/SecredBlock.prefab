@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 098d0fa4089d0a740b48c993db6a22ce, type: 2}
+  - {fileID: 2100000, guid: bb005990b4c93894986665afeec02c2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,5 +125,6 @@ MonoBehaviour:
   _timeRecycle: 20
   _touchTimeRecycle: 0
   ID: 2
+  _particleSystem: {fileID: 2959595429703850908, guid: 24e168824c10161449078e5a0fe3c847, type: 3}
   _objectReplace: {fileID: 0}
   _randomObjects: []

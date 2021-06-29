@@ -26,8 +26,9 @@ namespace Code.ElementsManager
         protected override void TriggerAction(Collider other)
         {
             if (!other.gameObject.CompareTag("Player")) return;
+            Instantiate(_particleSystem, _myTransform.position, _particleSystem.transform.rotation);
             if (_objectReplace == null) return;
-            Instantiate(_objectReplace, _myTransform.position, _myTransform.rotation);
+            Instantiate(_objectReplace, _myTransform.position, Quaternion.identity);
         }
 
         internal override void CollisionAction(Collision collision) => Debug.LogWarning("Not Implemented");
