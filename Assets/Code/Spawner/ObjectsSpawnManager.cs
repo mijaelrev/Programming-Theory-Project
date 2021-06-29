@@ -75,17 +75,6 @@ namespace Code.Spawner
         {
             _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             _myTransform = GetComponent<Transform>();
-            /*for (int x = -_maxNumberInstances; x < _maxNumberInstances; x++)
-            {
-                for (int z = -_maxNumberInstances; z < _maxNumberInstances; z++)
-                {
-                    var newPositionZ = _myTransform.position.z + x;
-                    var newPositionX = _myTransform.position.x + z;
-                    var CurrentPositionSpawn = new Vector3(newPositionZ, transform.position.y - 1, newPositionX);
-                    _factory.Create(0, CurrentPositionSpawn, Quaternion.identity);
-                }
-
-            }*/
             _position += Vector3.up;
 
         }

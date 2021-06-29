@@ -111,3 +111,4 @@ MonoBehaviour:
   _timeRecycle: 20
   _touchTimeRecycle: 1
   ID: 5
+  _particleSystem: {fileID: 8954901027204145395, guid: 03b487efa675d5b4ba29607ae8dd16ff, type: 3}
