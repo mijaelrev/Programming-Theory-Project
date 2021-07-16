@@ -4,7 +4,7 @@
 
 #### Sobre el juego
 
- Este videojuego ha sido hecho con el motor [UnityEngine](http://unity.com "UnityEngine") de la mano de [UnityLearn](http://learn.unity.com/ "UnityLearn").
+ Este videojuego ha sido hecho con el motor [UnityEngine](http://unity.com "UnityEngine") con el motivo de mostrarlo en [UnityLearn](http://learn.unity.com/ "UnityLearn").
  
  el juego trata sobre saltar y sobrevivir el mayor tiempo posible, pero ten cuidado, los bloques tienen un comportamiento distinto, ¿Cuándo tiempo podras sobrevivir?.
  
