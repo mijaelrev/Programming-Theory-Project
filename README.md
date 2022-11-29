@@ -1,34 +1,30 @@
-# Programming-Theory-Project.
+<h1> Programming-Theory-Project.</h1>
 
-## Don´t Fall Game
+<h2> Don´t Fall Game</h2>
 
-#### Sobre el juego
+<h3>Sobre el juego</h3>
 
- Este videojuego ha sido hecho con el motor [UnityEngine](http://unity.com "UnityEngine") con el motivo de mostrarlo en [UnityLearn](http://learn.unity.com/ "UnityLearn").
+<p>Este videojuego ha sido hecho con el motor <a href="http://unity.com">UnityEngine</a> con el motivo de mostrarlo en <a href="http://learn.unity.com/">UnityLearn</a>.</p>
  
- el juego trata sobre saltar y sobrevivir el mayor tiempo posible, pero ten cuidado, los bloques tienen un comportamiento distinto, ¿Cuándo tiempo podras sobrevivir?.
+<p>el juego trata sobre saltar y sobrevivir el mayor tiempo posible, pero ten cuidado, los bloques tienen un comportamiento distinto, ¿Cuándo tiempo podras sobrevivir?.</p>
  
- Solo esta disponible para Windows por ahora (posiblemente tambien sea publicado en WebGL, para otras platafomas no tengo intencion de hacer una Build).
+<p>Solo esta disponible para Windows por ahora (posiblemente tambien sea publicado en WebGL, para otras platafomas no tengo intencion de hacer una Build).</p>
 
-### Controles
+<h3> Controles </h3>
+<ul>
+  <li>W,A,S y D o flechas para el movimiento.</li>
+  <li>LeftShift para aumentar tu velocidad.</li>
+  <li>Space de el teclado.</li>
+  <li>Rueda del raton para acercar o elejar la camara.</li>
+</ul>
 
-- W,A,S y D o flechas para el movimiento.
+<h3> Mecanicas </h3>
+<ul>
+  <li> Al comenzar el juego se generara bloques aleatoriamente y pronto los que estan abajo iran desapareciendo. </li>
+  <li>Solo tienes una forma de salvar tu pescuezo y es intentar mantenerte medianamente arriba.</li>
+</ul>
 
-- LeftShift para aumentar tu velocidad.
-
-- Space de el teclado.
-
-- Raton para girar la camara.
-
-- Rueda del raton para acercar o elejar la camara.
-
-
-### Mecanicas
-
-Al comenzar el juego se generara bloques aleatoriamente y pronto los que estan abajo iran desapareciendo.
-
-Solo tienes una forma de salvar tu pescuezo y es intentar mantenerte medianamente arriba.
-
-### Descarga
-
-Tanto Archivo Rar como codigo fuente [aqui](https://github.com/mijaelrev/Programming-Theory-Project/releases "aqui")
+<h3>Descarga</h3>
+<p>
+Tanto Archivo Rar como codigo fuente <a href="https://github.com/mijaelrev/Programming-Theory-Project/releases">aqui</a>
+</p>
